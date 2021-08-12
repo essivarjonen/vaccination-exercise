@@ -1,0 +1,26 @@
+{
+  "name": "vaccination-exercise",
+  "version": "1.0.0",
+  "description": "vaccination-exercise",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/essivarjonen/vaccination-exercise.git"
+  },
+  "author": "Essi-Maria Varjonen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/essivarjonen/vaccination-exercise/issues"
+  },
+  "homepage": "https://github.com/essivarjonen/vaccination-exercise#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.0",
+    "mongoose": "^5.13.6"
+  }
+}
