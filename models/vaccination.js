@@ -1,4 +1,3 @@
-const { Timestamp } = require('mongodb')
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 const vaccinationSchema = new Schema({
@@ -7,13 +6,16 @@ const vaccinationSchema = new Schema({
         required: true
     },
     sourceBottle: {
-        type: id,
+        type: String,
         required: true
     },
     injected: {
-        type: Timestamp,
+        type: Date,
         required: true
     },
 })
 
-module.exports = mongoose.model('Vaccination', vaccinationSchema)
+
+const vaccination =  mongoose.model('Vaccination', vaccinationSchema)
+module.exports = vaccination
+

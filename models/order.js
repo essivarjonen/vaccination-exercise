@@ -1,4 +1,3 @@
-const { Timestamp } = require('mongodb')
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 const orderSchema = new Schema({
@@ -19,7 +18,7 @@ const orderSchema = new Schema({
         required: true
     },
     arrived: {
-        type: Timestamp,
+        type: Date,
         required: true
     },
     vaccine: {
@@ -28,4 +27,5 @@ const orderSchema = new Schema({
     },
 })
 
-module.exports = mongoose.model('Order', orderSchema)
+const order =  mongoose.model('Order', orderSchema)
+module.exports = order
