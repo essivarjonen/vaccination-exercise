@@ -1,7 +1,7 @@
 import './App.css';
 import Header from  './components/header'
 import Info from './components/info'
-import Order from './components/order'
+import Order from './components/order_vaccination'
 
 function App() {
   return (

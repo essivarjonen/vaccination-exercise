@@ -29,10 +29,10 @@ app.use(
   )
 
 try {
-db.once("open", () => {
-    console.log("Successfully connected to MongoDB using Mongoose!")
+    db.once("open", () => {
+     console.log("Successfully connected to MongoDB using Mongoose!")
 })} catch(err) {
-    console.log(`Failed to connect MongoDB: ${err}`)
+     console.log(`Failed to connect MongoDB: ${err}`)
 }
 
 

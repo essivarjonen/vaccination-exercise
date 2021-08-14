@@ -1,0 +1,17 @@
+body {
+    background-color: cadetblue !important;
+    margin: 20px !important;
+}
+
+.table {
+    color: black;
+    padding-top: 60px;
+}
+
+.vaccine-table {
+    padding: 30px;
+}
+
+.gender-table {
+    padding: 30px;
+}
