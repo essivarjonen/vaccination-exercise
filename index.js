@@ -10,7 +10,7 @@ const vaccination = require('./models/vaccination')
 
 mongoose.Promise = global.Promise
 mongoose.connect(
-    "mongodb://localhost:27017/vaccination_db", {
+    "mongodb+srv://admin:QsHHQglXfqcqMyla@cluster0.vywdv.mongodb.net/vaccination_db", {
     useNewUrlParser: true,
     useCreateIndex: true
     })
