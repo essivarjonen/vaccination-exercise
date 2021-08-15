@@ -1,3 +1,4 @@
+// Schemas are done using mongoose
 const mongoose = require('mongoose')
 const { Schema } = mongoose
 const orderSchema = new Schema({

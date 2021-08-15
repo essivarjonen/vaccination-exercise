@@ -8,17 +8,17 @@ const order = require('./models/order')
 const vaccination = require('./models/vaccination')
 
 
+// Connecting MongoDB Atlas
 mongoose.Promise = global.Promise
 mongoose.connect(
     "mongodb+srv://admin:QsHHQglXfqcqMyla@cluster0.vywdv.mongodb.net/vaccination_db", {
     useNewUrlParser: true,
     useCreateIndex: true
     })
-
 mongoose.set("useCreateIndex", true)
-
 const db = mongoose.connection
 
+// Setting up ther express.js server
 app.use(cors())
 app.use(express.json())
 app.use(
@@ -28,6 +28,7 @@ app.use(
     })
   )
 
+// Connrct database 
 try {
     db.once("open", () => {
      console.log("Successfully connected to MongoDB using Mongoose!")
@@ -35,7 +36,7 @@ try {
      console.log(`Failed to connect MongoDB: ${err}`)
 }
 
-
+// App routers
 app.get('/orders', (req, res) => {
     order.find({ })
     .then((data) => {

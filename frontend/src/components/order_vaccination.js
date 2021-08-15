@@ -1,7 +1,6 @@
 /* eslint-disable camelcase */
 import React from 'react'
 import './css/order_vaccination.css'
-
 class Order extends React.Component {
 
     state = {
@@ -32,6 +31,7 @@ class Order extends React.Component {
     //console.log('Vaccination data:', vacData)
   }
 
+  // Count different vaccines
   countVaccine() {
     const countVaccines = this.state.order.filter(ord => ord.vaccine === 'Zerpfy')
     return countVaccines.length
@@ -45,7 +45,7 @@ class Order extends React.Component {
     const countVaccines = this.state.order.filter(ord => ord.vaccine === 'SolarBuddhica')
     return countVaccines.length
   }
-
+// Count different genders
   countMale(){
     const countMales = this.state.vaccination.filter(vac => vac.gender === 'male')
     return countMales.length
@@ -62,6 +62,7 @@ class Order extends React.Component {
   }
 
   render () {
+    //count orders and vaccinations total
     const allOrders = this.state.order.map(o => o.id)
     const totalOrders = allOrders.length
 
@@ -69,7 +70,7 @@ class Order extends React.Component {
     const totalVaccinations = allVaccinations.length
 
     return (
-    
+        /*All tables */
         <div>
             <div className="table">
         <table class="table table-bordered container">
@@ -89,10 +90,11 @@ class Order extends React.Component {
             </tbody>
         </table>    
         </div>   
-
+        
         <div className="vaccine-table">
           <h1 class="display-6 text-lowercase text-center">Vaccine</h1>
           <br></br>
+        
           <table class="table table table-dark container">
             <thead>
               <tr>
